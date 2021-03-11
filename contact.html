@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+
+    <meta charset="utf-8">
+
+    <title></title>
+
+    <link type="text/css" rel="stylesheet" href="styles.css">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+   <script src="https://kit.fontawesome.com/6a2b3eaa5e.js" crossorigin="anonymous"></script>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  </head>
+
+  <body class="contact">
+
+   <div class="contact-page">
+    <header>
+      <img class="logo" src="images/s-logo.png" alt="sarah falter logo" title="sarah falter logo" width="50">
+           <div class="desktop-right">
+               <nav class="desktop-menu">
+                 <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="#">Contact</a></li>
+                 </ul>
+               </nav>
+            </div>
+
+            <!--mobile navigation menu-->
+            <button class="hamburger">&#9776;</button>
+            <button class="cross">&#735;</button>
+                 <nav class="menu">
+                  <ul>
+                   <li><a href="index.html">Home</a></li>
+                   <li><a href="portfolio.html">Portfolio</a></li>
+                   <li><a href="about.html">About</a></li>
+                   <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                 </nav>
+    </header>
+
+
+   <div class="contactform">
+
+        <form name="contact-form" method="POST" action="">
+
+          <h2>Let's Get In Touch</h2>
+
+           <div class="first-name">
+             <label for="first-name" class="label">First Name</label>
+               <input type="text" name="firstname" id="first-name" placeholder="ex. Michael"/>
+           </div>
+
+           <div class="last-name">
+             <label for="Name" class="label">Last Name</label>
+               <input type="text" name="lastname" id="last-name" placeholoder="ex. Scott"/>
+           </div>
+
+           <div class="email">
+             <label for="email" class="label">Email</label>
+             <input type="email" name="email" id="email" placeholder="ex. mscott@dundermifflin.com"/>
+           </div>
+
+           <div class="message">
+             <label for="text" class="label">Message</label>
+             <textarea name="message" rows="10" cols="30" id="message" placeholder="I am a little stitious"> </textarea>
+           </div>
+
+           <div class="submit">
+             <input type="submit" name="Send Message"/>
+           </div>
+
+        </form>
+  </div>
+
+
+  </div>
+
+  <script src="js/hamburger.js"></script>
+
+  </body>
+</html>
