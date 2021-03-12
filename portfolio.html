@@ -17,8 +17,12 @@
       <script src="js/html5shiv-printshiv.min.js"></script>
     <![endif] -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+   <script src="js/jquery.bxslider.min.js"></script>
+   <!-- bxSlider CSS file -->
+   <link href="jquery.bxslider.css" rel="stylesheet" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body class="portfolio">
@@ -49,12 +53,21 @@
     </header>
 
 
+    <ul class="bxslider">
+       <li><img src="images/portfolio-large-4.png" title="Funky roots"></li>
+       <li><img src="images/portfolio-large-5.png" title="The long and winding road"></li>
+       <li><img src="images/portfolio-large-6.png" title="Happy trees"></li>
+   </ul>
 
 
 
 
-
-
+  <script src="js/hamburger.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.bxslider').bxSlider();
+  });
+</script>
 
   </body>
 </html>

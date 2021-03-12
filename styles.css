@@ -26,9 +26,13 @@ body {
 	min-height: 100vh;
 }
 
-.content {
+a {
+	text-decoration: none;
+}
+
+.content, .about {
+	background:  #08161c;
 	flex: 1 0 auto;
-	background: #08161c;
 	margin-top: -13px;
   position: relative;
   z-index: 1;
@@ -49,8 +53,8 @@ transform-origin: 100%;
 z-index: -1;
 }
 
-.abut, .contact, .portfolio {
-	background:  #08161c
+.aboutpage, .contact, .portfolio {
+	background: #08161c;
 }
 footer {
 	flex-shrink: 0;
@@ -87,7 +91,7 @@ hamburger menu stylesheet
   top: 0;
   right:0;
   padding: 7px 10% 0 15px;
-  color:#999;
+  color:#fff;
   border:0;
   font-size:3em;
   line-height:65px;
@@ -100,7 +104,7 @@ hamburger menu stylesheet
 .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
 .menu li {display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
 .menu li:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
-.menu ul li a { text-decoration:none;  margin: 0; color:#fff;}
+.menu ul li a { text-decoration:none;  margin: 0; color:#c6caff;}
 .menu ul li a:hover { color: #846abb; text-decoration:none; transition: .2s;}
 .menu a{text-decoration:none; color:#dddddd;}
 .menu a:hover{text-decoration:none; color:#666;}
@@ -126,6 +130,7 @@ section {
 }
 
 section h1 {
+	animation: bounce ease-in .7s .3s backwards;
 	font-weight: bold;
 	font-size: 2.5rem;
 	text-shadow: 2px 2px #08161c63;
@@ -133,10 +138,12 @@ section h1 {
 }
 
 section p {
+	animation: fadein ease-out .8s .9s backwards;
 	font-size: 1.5rem;
 }
 
 section a {
+	animation: fadein ease-in-out 1s 1.5s backwards;
 	background: #8086d7;
   text-decoration: none;
   padding: 10px;
@@ -154,17 +161,9 @@ span {
 	padding: 20px;
 }
 
-#container {
-	width: 20%;
-	height: 200px;
-	background-color: gray;
-	margin: auto;
-	padding: 2%;
-	margin-top: 140px;
-}
 
 footer {
-  margin-top: 110px;
+  margin-top: 60px;
 	padding: 20px;
 }
 
@@ -172,6 +171,7 @@ footer ul {
 	list-style: none;
 	text-align: center;
 }
+
 footer ul li {
 	display: inline;
 }
@@ -179,12 +179,12 @@ footer ul li {
 
 footer ul li a {
 	text-decoration: none;
-	color: blue;
+	color: #c6caff;
 }
 
 footer p {
 	text-align: center;
-	color: blue;
+	color: #c6caff;
 }
 /*==============================================================
 
@@ -206,14 +206,6 @@ MIN WIDTH 320
 /*===============================END MIN WIDTH 320=================*/
 
 
-/*****************************START MIN WIDTH 450*******************/
-
-@media (min-width: 450px) {
-	.projects {
-		padding: 3% 9%;
-	}
-}
-/****************************END MINWIDTH 450**********************/
 
 
 /*************************START MIN WIDTH 620**********************/
@@ -226,14 +218,19 @@ MIN WIDTH 320
 		max-width: 400px;
 	}
 
-  .projects {
-		padding: 1% 6%;
-	}
 }
 
 /***********************END MIN WIDTH 620************************/
 
+/**********************BEGIN MIN WDTH 850***********************/
 
+section a:hover {
+	background: #2a48ac;
+	color: #fff;
+	transition: .5s;
+}
+
+/************************END 850******************************/
 
 /*********************************START MIN WIDTH 1000***************/
 
@@ -280,12 +277,6 @@ MIN WIDTH 320
 		font-size: 3em;
 		max-width: 600px;
 
- }
-
-  .projects {
-	 padding: 1% 6%;
-	 color: #8086D7;
-	 font-weight: bold;
  }
 
 /*******************************END MIN WIDTH 1000PX****/
@@ -344,13 +335,16 @@ aside figcaption {
 	font-style: italic;
 }
 
-
+footer {
+	clear: both;
+}
+/********************MINWIDTH 450*********************/
 @media (min-width: 450px) {
 	aside img {
 		width: 70%;
 	}
 }
-
+/***********************MINWIDTH 900*******************/
 @media (min-width: 900px) {
 		article {
     margin-top: 30px;
@@ -366,17 +360,11 @@ aside figcaption {
     margin-top: -486px;
  }
 }
-
+/************************MINWIDTH 955*********************/
 @media (min-width: 955px) {
 	aside {
 		margin-top: -435px;
 	}
-}
-
-@media (min-width: 1000px) {
-
-
-
 }
 
 
@@ -385,7 +373,41 @@ aside figcaption {
                         CONTACT.HTML STYLING
 ***************************************************************************/
 
+#container {
+	animation: fadein ease-in 1s 1s backwards;
+    width: 51%;
+    height: 389px;
+    background-color: gray;
+    margin: auto;
+    padding: 2%;
+    margin-top: 140px;
+}
 
+.contact a {
+	color: #fff;
+}
+
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+.bounce {
+  -moz-animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+  animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
 .contactform {
  display: flex;
  justify-content: center;
@@ -398,39 +420,81 @@ aside figcaption {
 }
 
 form {
-    background: #dddddd;
-    padding: 20px 90px;
-		color: #08161c;
+	animation: fadein ease 3s 1s backwards;
+  background: #dddddd;
+  padding: 20px 90px;
+	color: #08161c;
 }
 
 form h2 {
 	text-align: center;
-	margin-bottom: 2%;
+	margin-bottom: 6%;
 }
 label.label {
-	display: block;
- float: left;
+ display: block;
  padding-right: 4%;
 }
 
 .first-name, .last-name, .email, .message {
-	margin-bottom: 3%;
+	margin-bottom: 5%;
 }
 
 input#first-name, input#last-name, input#email {
-	padding: 1%;
 	background: none;
-	border-bottom: 2px solid gray;
+ 	border-bottom: 2px solid gray;
+	display: block;
+	padding: 1%;
+
+}
+
+textarea#message {
+  background: none;
+  border: 1px solid gray;
+  margin-top: 5%;
 }
 
 input[type="submit"] {
-    padding: 6px 30px;
-    margin-top: 7%;
+  padding: 6px 30px;
+  margin-top: 7%;
 }
 
 
 input[type="submit"]:hover {
-	background: black;
-	color: #fff;
-	transition: .3s;
+ background: black;
+ color: #fff;
+ transition: .3s;
+}
+
+/*********************************MAXWIDTH QUERY 655*****/
+
+@media (max-width: 655px) {
+	#container {
+		width: 94%;
+	}
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+		transform: scale(0.1);
+
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+
+	}
+
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
