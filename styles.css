@@ -337,6 +337,7 @@ aside figcaption {
 
 footer {
 	clear: both;
+	margin-top: 100px;
 }
 /********************MINWIDTH 450*********************/
 @media (min-width: 450px) {
@@ -368,13 +369,30 @@ footer {
 }
 
 
+/**************************************************************************
+
+                  PORTFOLIO.HTML STYLING
+
+********************************************************************************/
+.gallery h2 {
+	animation: bounce ease-in 1.3s .3s backwards;
+	text-align: center;
+	margin-top: 90px;
+}
+.bx-wrapper {
+	position: relative;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+
 /*************************************************************CONTACT>HTML STYLES*
 
                         CONTACT.HTML STYLING
 ***************************************************************************/
 
 #container {
-	animation: fadein ease-in 1s 1s backwards;
+	animation: fadein ease-in 1s .4s backwards;
     width: 51%;
     height: 389px;
     background-color: gray;
@@ -420,7 +438,7 @@ footer {
 }
 
 form {
-	animation: fadein ease 3s 1s backwards;
+	animation: fadein ease 3s 4s backwards;
   background: #dddddd;
   padding: 20px 90px;
 	color: #08161c;

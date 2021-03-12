@@ -22,6 +22,7 @@
    <script src="js/jquery.bxslider.min.js"></script>
    <!-- bxSlider CSS file -->
    <link href="jquery.bxslider.css" rel="stylesheet" />
+   <link href="jquery.bxslider.min.css" rel ="stylesheet"/>
 
   </head>
 
@@ -29,14 +30,14 @@
     <header>
       <img class="logo" src="images/s-logo.png" alt="sarah falter logo" title="sarah falter logo" width="50">
            <div class="desktop-right">
-               <nav class="desktop-menu">
-                 <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="#">Portfolio</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="#">Contact</a></li>
-                 </ul>
-               </nav>
+             <nav class="desktop-menu">
+               <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+               </ul>
+             </nav>
             </div>
 
             <!--mobile navigation menu-->
@@ -52,22 +53,45 @@
                  </nav>
     </header>
 
+    <div class="gallery">
+      <h2>Recent Projects by Sarah Falter</h2>
 
     <ul class="bxslider">
-       <li><img src="images/portfolio-large-4.png" title="Funky roots"></li>
-       <li><img src="images/portfolio-large-5.png" title="The long and winding road"></li>
-       <li><img src="images/portfolio-large-6.png" title="Happy trees"></li>
+       <li><img src="images/portfolio-large-6.png" title="Portiko Technologies - A Visual Identity. Proposed Landing Page. Full brand identity designed and developed by Sarah Falter."></li>
+       <li><img src="images/portfolio-large-7.png" title="Portiko Technologies - A Visual Identity. Proposed Mobile Landing Page."></li>
+       <li><img src="images/portfolio-large-4.png" title="Portiko Technologies - A Visual Identity. Proposed Letterhead."></li>
+       <li><img src="images/portfolio-large-5.png" title="Portiko Technologies - A Visual Identity. Proposed Business Card."></li>
+       <li><img src="images/portfolio-large-8.png" title="Cafe Central - A Visual Identity. Full brand identity designed and developed by Sarah Falter"></li>
+       <li><img src="images/portfolio-large-10.png" title="Cafe Central - A Visual Identity."></li>
+       <li><img src="images/portfolio1.png" title="G Gallery - Art Website and Brand Identity"></li>
+       <li><img src="images/portfolio2.png" title="G Gallery - Mobile Art Website and Brand Identity "></li>
+       <li><img src="images/portfolio4.png" title="The Met Proposed Brochure Design. Please note this project was created for academic purposes."></li>
+       <li><img src="images/portfolio-large-9.png" title="Gone Girl - Book Cover Redesign"></li>
    </ul>
 
+  </div>
 
+
+  	<footer>
+  		<ul>
+  			<li><a href="https://instagram.com/artbysarahkate" class="fab fa-instagram"></a><li>
+  			<li><a href="https://www.linkedin.com/in/sarah-falter" class="fab fa-linkedin-in"></a></li>
+  			<li><a href="mailto:sarah.falter@ufl.edu" class="fas fa-envelope"></a><li>
+  		 </ul>
+       <p>&copy; Sarah Falter 2021 All Rights Reserved</p>
+   </footer>
 
 
   <script src="js/hamburger.js"></script>
-<script>
-  $(document).ready(function(){
-    $('.bxslider').bxSlider();
-  });
-</script>
+    <script>
+    $(document).ready(function(){
+      $('.bxslider').bxSlider({
+        mode: 'fade',
+        captions: true,
+        slideWidth: 600
+      });
+    });
+    </script>
 
   </body>
 </html>
