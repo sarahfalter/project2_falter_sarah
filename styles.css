@@ -269,10 +269,6 @@ section a:hover {
 	color: #C6CAFF;
 }
 
-  .headshot {
-	 display: none;
- }
-
   .section h1 {
 		font-size: 3em;
 		max-width: 600px;
@@ -438,7 +434,7 @@ footer {
 }
 
 form {
-	animation: fadein ease 3s 4s backwards;
+	animation: fadein ease 3s 2s backwards;
   background: #dddddd;
   padding: 20px 90px;
 	color: #08161c;
