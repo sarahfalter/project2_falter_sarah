@@ -56,46 +56,39 @@
                   </ul>
                  </nav>
     </header>
+    <div class="contactform">
 
-    <div id="container">
-    </div>
+         <form id="test_form" name="test_form" method="POST" action="form.php" onsubmit="return validateForm(this)">
 
-    <div class="arrow bounce">
-     <a class="fa fa-arrow-down fa-2x" href="#"></a>
-    </div>
+           <h2>Let's Get In Touch</h2>
 
-   <div class="contactform">
+            <div class="first-name">
+              <label for="first-name" class="label">First Name</label>
+                <input type="text" name="firstname" id="first-name"/>
+            </div>
 
-        <form id="test_form" name="test_form" method="" action="form.php" onsubmit="return validateForm(this)">
+            <div class="last-name">
+              <label for="last-name" class="label">Last Name</label>
+                <input type="text" name="lastname" id="last-name"/>
+            </div>
 
-          <h2>Let's Get In Touch</h2>
+            <div class="email">
+              <label for="email" class="label">Email</label>
+              <input type="email" name="email" id="email"/>
+            </div>
 
-           <div class="first-name">
-             <label for="first-name" class="label">First Name</label>
-               <input type="text" name="firstname" id="first-name"/>
-           </div>
+            <div class="message">
+              <label for="text" class="label">Message</label>
+              <textarea name="message" rows="10" cols="30" id="text"></textarea>
+            </div>
 
-           <div class="last-name">
-             <label for="Name" class="label">Last Name</label>
-               <input type="text" name="lastname" id="last-name"/>
-           </div>
+            <div class="submit">
+              <input type="submit" name="Send Message"/>
+            </div>
 
-           <div class="email">
-             <label for="email" class="label">Email</label>
-             <input type="email" name="email" id="email"/>
-           </div>
-
-           <div class="message">
-             <label for="text" class="label">Message</label>
-             <textarea name="message" rows="10" cols="30" id="message"></textarea>
-           </div>
-
-           <div class="submit">
-             <input type="submit" name="Send Message"/>
-           </div>
-
-        </form>
-  </div>
+         </form>
+   </div>
+   
 
   <footer>
    <ul>

@@ -14,12 +14,10 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
     display:block;
 }
 
-
-
 body {
-	background: #fff;
+	background: #08161c;
   font-family: 'Lato', sans-serif;
-	color: #E0E0E0;
+	color: #fff;
 	display: flex;
 	flex-direction: column;
 	padding: 1% 0 0;
@@ -30,39 +28,12 @@ a {
 	text-decoration: none;
 }
 
-.content, .about {
-	background:  #08161c;
-	flex: 1 0 auto;
-	margin-top: -13px;
-  position: relative;
-  z-index: 1;
-}
-
-.home
-.content::after {
-background: inherit;
-bottom: 0;
-content: '';
-display: block;
-height: 50%;
-left: 0;
-position: absolute;
-right: 0;
-transform: skewY(-1.5deg);
-transform-origin: 100%;
-z-index: -1;
-}
-
-.aboutpage, .contact, .portfolio {
-	background: #08161c;
-}
 footer {
 	flex-shrink: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Raleway', sans-serif;
-	font-weight: lighter;
 }
 
 /***************************************************
@@ -122,45 +93,41 @@ INDEX.HTML STYLING
 	display: none;
 }
 
+#content {
+	animation: fadein ease-in 1s .2s backwards;
+	height: 600px;
+	margin-top: 50px;
+}
 section {
 	text-align: center;
 	padding: 10px 4%;
-	margin-top: 220px;
+	margin-top: 50px;
   padding-bottom: 10%;
 }
 
 section h1 {
-	animation: bounce ease-in .7s .3s backwards;
+	animation: bounce ease-in .7s .6s backwards;
+	color: #C6CAFF;
 	font-weight: bold;
-	font-size: 2.5rem;
-	text-shadow: 2px 2px #08161c63;
+	font-size: 2.7rem;
 	margin: auto;
 }
 
 section p {
-	animation: fadein ease-out .8s .9s backwards;
+	animation: fadein ease-out .8s 1s backwards;
+	color: #C6CAFF;
 	font-size: 1.5rem;
 }
 
 section a {
-	animation: fadein ease-in-out 1s 1.5s backwards;
-	background: #8086d7;
+	animation: fadein ease-in-out 1s 1.6s backwards;
+	background: #2a48ac;
+	color: #fff;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 7px;
   position: relative;
   top: 25px;
 }
-
-span {
- color: #C6CAFF;
-}
-
-.bg-color {
-	background: black;
-	width: 100%;
-	padding: 20px;
-}
-
 
 footer {
   margin-top: 60px;
@@ -193,19 +160,10 @@ MIN WIDTH 320
 ================================================================*/
 
 @media (min-width: 320px) {
-	.headshot {
-		width: 100%;
-		max-width: 200px;
-	}
-
 	.hamburger {
 		right: 8%;
 	}
 }
-
-/*===============================END MIN WIDTH 320=================*/
-
-
 
 
 /*************************START MIN WIDTH 620**********************/
@@ -220,62 +178,60 @@ MIN WIDTH 320
 
 }
 
-/***********************END MIN WIDTH 620************************/
-
 /**********************BEGIN MIN WDTH 850***********************/
 
 section a:hover {
-	background: #2a48ac;
-	color: #fff;
+	background: #fff;
+	color: #08161c;
 	transition: .5s;
 }
 
-/************************END 850******************************/
-
-/*********************************START MIN WIDTH 1000***************/
+/********************START MIN WIDTH 1000************************/
 
 @media (min-width: 1000px) {
 
-	.hamburger {
+.hamburger {
 		display: none;
-  }
+}
 
-  .desktop-menu {
+.desktop-menu {
 	display: block;
 }
-	.desktop-right {
-		float: right;
-		margin-top: 1%;
-		width: 33%;
-	}
 
-	.desktop-menu li {
+.desktop-right {
+	position: absolute;
+	right: 0;
+	width: 33%;
+	z-index: 99999;
+}
+
+.desktop-menu li {
 		display: inline;
-	}
+}
 
 .desktop-menu li a {
-		text-decoration: none;
-		color: white;
-		font-weight: lighter;
-		padding: 5px 4%;
+	color: white;
+	padding: 5px 4%;
+	text-decoration: none;
 }
 
 .desktop-menu li a:hover {
 	background: white;
 	color: black;
-}
-.desktop-menu li a:active {
-	border-bottom: 1px solid white;
-	color: #C6CAFF;
+	transition: .5s;
 }
 
-  .section h1 {
-		font-size: 3em;
-		max-width: 600px;
+section h1 {
+	font-size: 3.9rem;
+}
 
- }
-
-/*******************************END MIN WIDTH 1000PX****/
+section p {
+	font-size: 2.3rem;
+}
+section a {
+	padding: 10px 54px;
+}
+/*******************************START MAX WIDTH QUERIES INDEX.HTML****/
 
 @media (max-width: 1000px) {
 	.desktop-menu {
@@ -287,6 +243,10 @@ section a:hover {
 @media (max-width: 620px) {
 	.section h1 {
 		max-width: 300px;
+	}
+
+	#content {
+	   height: 400px;
 	}
 }
 
@@ -301,20 +261,24 @@ img.logo {
 }
 
 .about_header {
+	animation: fadein ease-out .5s .3s backwards;
 	padding-left: 5%;
 	margin-top: 80px;
 	letter-spacing: 2px;
 }
 article {
-    margin-top: 10px;
-    padding: 0 5%;
-		line-height: 2;
+	animation: fadein ease-out .5s .3s backwards;
+  margin-top: 10px;
+  padding: 0 5%;
+	line-height: 2;
 }
 
 article h3 {
+	animation: fadein ease-out .5s .3s backwards;
 	letter-spacing: 2px;
 }
 aside {
+	animation: bounce ease-in .7s .9s backwards;
 	padding: 0 5%;
 	text-align: center;
 	margin-top: 20px;
@@ -387,62 +351,29 @@ footer {
                         CONTACT.HTML STYLING
 ***************************************************************************/
 
-#container {
-	animation: fadein ease-in 1s .4s backwards;
-    width: 51%;
-    height: 389px;
-    background-color: gray;
-    margin: auto;
-    padding: 2%;
-    margin-top: 140px;
-}
+
 
 .contact a {
-	color: #fff;
+	color: #c6caff;
 }
 
-.arrow {
-  text-align: center;
-  margin: 8% 0;
-}
-.bounce {
-  -moz-animation: arrow 2s infinite;
-  -webkit-animation: arrow 2s infinite;
-  animation: arrow 2s infinite;
-}
-
-@keyframes arrow {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
 .contactform {
  display: flex;
  justify-content: center;
  padding: 3% 6%;
- margin: 200px auto;
-}
-
-.contatform h1 {
-	display: block;
+ margin: 100px auto;
 }
 
 form {
-	animation: fadein ease 3s 2s backwards;
+	animation: fadein ease 3s .8s backwards;
   background: #dddddd;
   padding: 20px 90px;
 	color: #08161c;
 }
 
 form h2 {
-	text-align: center;
-	margin-bottom: 6%;
+	font-weight: bold;
+	margin-bottom: 7%;
 }
 label.label {
  display: block;
@@ -461,15 +392,17 @@ input#first-name, input#last-name, input#email {
 
 }
 
-textarea#message {
+textarea#text {
   background: none;
   border: 1px solid gray;
   margin-top: 5%;
 }
 
 input[type="submit"] {
+	background: none;
+	border: 1px solid #666;
+	margin-top: 7%;
   padding: 6px 30px;
-  margin-top: 7%;
 }
 
 
@@ -486,6 +419,10 @@ input[type="submit"]:hover {
 		width: 94%;
 	}
 }
+/************************************END 655 QUERY**********/
+
+/*************************************BEGIN KEYFRAMES*******/
+
 
 @keyframes fadein {
 	0% {
@@ -510,5 +447,17 @@ input[type="submit"]:hover {
   100% {
     opacity: 1;
     transform: none;
+  }
+}
+
+@keyframes arrow {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
   }
 }
